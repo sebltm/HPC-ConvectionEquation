@@ -1,0 +1,28 @@
+# This is an example gnuplot script for plotting the u
+# values in first coursework assigment (advection equation).
+# It is assumed that the data to be plotted are in a file called
+# u.dat which contains 3 columns: x,y,u
+# The plot is sent to a PDF file called u.pdf
+# To use this file copy it to the directory containing 
+# u.dat and run the command: 
+# gnuplot example_gnuplot_file 
+
+
+# Send output to a PDF file.
+set terminal pdf color enhanced
+# Set the name of the output file
+set output "initial.pdf"
+
+# Set ranges and labels for axes
+set xrange [0:1.0]
+set yrange [0:1.0]
+set xlabel "x"
+set ylabel "y"
+
+# Set the aspect ratio to 1
+set size square 
+
+# Plot the data 
+plot "initial.dat" with image 
+
+# End of file
